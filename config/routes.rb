@@ -1,4 +1,16 @@
 Rails.application.routes.draw do
+
+  get("/", { :controller => "directors", :action => "index" })  
+
+  get("/directors", { :controller => "directors", :action => "index"})
+  get("/directors/:id", { :controller => "directors", :action => "view_director"})
+
+  kget("/directors/new", { :controller => "directors", :action => "new_form"})
+
+  get("/delete_director/:id", { :controller => "directors", :actions => "destroy"})
+
+end
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
@@ -53,4 +65,3 @@ Rails.application.routes.draw do
   #     # (app/controllers/admin/products_controller.rb)
   #     resources :products
   #   end
-end
