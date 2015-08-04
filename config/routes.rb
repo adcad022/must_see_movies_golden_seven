@@ -1,13 +1,37 @@
 Rails.application.routes.draw do
 
-  get("/", { :controller => "directors", :action => "index" })  
+#Create
+get('/directors/new_form', { :controller => 'directors', :action => 'new_form'})
+get('/create_director', { :controller => 'directors', :action => 'create_row'})
 
-  get("/directors", { :controller => "directors", :action => "index"})
-  get("/directors/:id", { :controller => "directors", :action => "view_director"})
+#Read
+get('/directors', { :controller => 'directors', :action => 'index'})
+get('/directors/:id', { :controller => 'directors', :action => 'show'})
 
-  kget("/directors/new", { :controller => "directors", :action => "new_form"})
+#Update
+get('/directors/:id/edit_form', { :controller => 'directors', :action => 'edit_form'})
+get('/update_director/:id', { :controller => 'directors', :action => 'update_row'})
 
-  get("/delete_director/:id", { :controller => "directors", :actions => "destroy"})
+#Delete
+get('/delete_director/:id', { :controller => 'directors', :action => 'destroy'})
+
+#--------------------------
+#Create
+get('/actors/new_form', { :controller => 'actors', :action => 'new_form'})
+get('/create_actor', { :controller => 'actors', :action => 'create_row'})
+
+# Read
+get('/actors', { :controller => 'actors', :action => 'index'})
+get('/actors/:id', { :controller => 'actors', :action => 'show'})
+
+#Update
+get('/actors/:id/edit_form', { :controller => 'actors', :action => 'edit_form'})
+get('/update_actor/:id', { :controller => 'actors', :action => 'update_row'})
+
+#Delete
+get('/delete_actor/:id', { :controller => 'actors', :action => 'destroy'})
+
+
 
 end
 
