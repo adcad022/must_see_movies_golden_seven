@@ -32,6 +32,22 @@ get('/update_actor/:id', { :controller => 'actors', :action => 'update_row'})
 get('/delete_actor/:id', { :controller => 'actors', :action => 'destroy'})
 
 
+#--------------------------
+#Create
+get('/movies/new_form', { :controller => 'movies', :action => 'new_form'})
+get('/create_movie', { :controller => 'movies', :action => 'create_row'})
+
+# Read
+get('/movies', { :controller => 'movies', :action => 'index'})
+get('/movies/:id', { :controller => 'movies', :action => 'show'})
+
+#Update
+get('/movies/:id/edit_form', { :controller => 'movies', :action => 'edit_form'})
+get('/update_movie/:id', { :controller => 'movies', :action => 'update_row'})
+
+#Delete
+get('/delete_movie/:id', { :controller => 'movies', :action => 'destroy'})
+
 
 end
 
