@@ -14,7 +14,7 @@ class DirectorsController < ApplicationController
 		@director.save
 
 		redirect_to("http://localhost:3000/directors")
-	end	
+	end
 
 	def index
 		@director = Director.all
